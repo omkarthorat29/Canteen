@@ -1,0 +1,57 @@
+<div class="container mt-5" style="font-family: 'Inter', sans-serif;">
+    <!-- Header with Logout -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-semibold text-dark">Welcome, Admin</h4>
+    <button class="btn btn-outline-danger rounded-pill px-4 py-2 shadow-sm" (click)="logout()">
+      🔓 Logout
+    </button>
+  </div>
+  
+    <div class="bg-light p-5 rounded shadow-sm mb-5 border">
+      <h2 class="mb-4 text-center text-dark">📅 Select a Date</h2>
+      <form>
+        <div class="form-floating">
+          <input
+            (change)="updateDate()"
+            type="date"
+            class="form-control"
+            id="dateInput"
+            [(ngModel)]="selectedDate"
+            name="date"
+          />
+          <label for="dateInput">Choose a date</label>
+        </div>
+  
+        <div *ngIf="selectedDate" class="alert alert-info mt-4 text-center fs-5 shadow-sm">
+          You selected: <strong>{{ selectedDate }}</strong>
+        </div>
+      </form>
+    </div>
+  
+    <!-- Meal Counts -->
+    <section class="text-center">
+      <h2 class="mb-4 text-gradient">🍽️ Meal Counts</h2>
+  
+      <div class="row g-4">
+        <!-- Breakfast Card -->
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100 bg-white rounded-4 hover-zoom">
+            <div class="card-body py-5">
+              <h5 class="card-title mb-3 text-success fs-4 fw-semibold">🍳 Breakfast</h5>
+              <p class="display-5 fw-bold text-success">{{ records.breakfastCount }}</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Lunch Card -->
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100 bg-white rounded-4 hover-zoom">
+            <div class="card-body py-5">
+              <h5 class="card-title mb-3 text-primary fs-4 fw-semibold">🥗 Lunch</h5>
+              <p class="display-5 fw-bold text-primary">{{ records.lunchCount }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>

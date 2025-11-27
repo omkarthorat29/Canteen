@@ -1,0 +1,54 @@
+<div class="container py-5">
+  <div class="card shadow-sm border-0">
+    <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+      <h5 class="mb-0">Entry Form for Fasting</h5>
+      <small class="text-light fst-italic">Fill your preferences</small>
+    </div>
+
+    <div class="card-body">
+      <form [formGroup]="entryForm" class="row g-1">
+
+        <!-- Date Picker -->
+        <div class="col-md-6">
+          <label for="entryDate" class="form-label">📅 Select Date</label>
+          <input
+            type="date"
+            id="entryDate"
+            class="form-control"
+            formControlName="date"
+          />
+        </div>
+
+        <!-- Meal Preferences -->
+        <div class="col-12">
+          <label class="form-label d-block">🍽️ Meals</label>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="breakfast"
+              formControlName="breakfast"
+            />
+            <label class="form-check-label" for="breakfast">Breakfast</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="lunch"
+              formControlName="lunch"
+            />
+            <label class="form-check-label" for="lunch">Lunch</label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-4">
+          <button type="button" class="btn btn-success w-100" (click)="submitEntry('fasting')">
+            ✅ Submit Entry
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

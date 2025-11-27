@@ -1,0 +1,59 @@
+.card {
+    background-color: #f9f9f9; /* Light background for cards */
+    border-radius: 10px; /* Rounded corners for cards */
+  }
+  .card-body {
+    padding: 20px;
+  }
+  .card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  .box {
+    height: 80px; /* Fixed height for the boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    background-color:#8fbcef ;
+  }
+  h3 {
+    color: #007bff; /* Title color */
+  }
+
+  .bg-blue {
+    cursor: pointer;
+    background-color: #94beee; /* Blue background for breakfast */
+  }
+  .bg-lightblue {
+    cursor: pointer;
+    background-color: #beb3ff; /* Light blue background for lunch */
+  }
+.bg-lightblue:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+.rounded:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+  .rounded {
+    cursor: pointer;
+  }
+
+.small-box {
+  width: 40px;
+  height: 45px;
+  font-size: 14px;
+  line-height: 30px;
+  color: white;
+  cursor: pointer;
+}
